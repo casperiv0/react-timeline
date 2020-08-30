@@ -52,7 +52,7 @@ function App() {
 
 ## Playground
 
-**Soon™**
+<https://codesandbox.io/s/k2ix2>
 
 ## Available Props
 
