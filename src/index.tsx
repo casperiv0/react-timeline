@@ -1,11 +1,11 @@
 import * as React from "react";
 import {
   TimelineDiv,
-  TimelineItemDiv,
-  TimelineItemHeaderP,
-  TimelineItemHeaderH4,
   TimelineItemBodyDiv,
+  TimelineItemDiv,
   TimelineItemHeaderDiv,
+  TimelineItemHeaderH4,
+  TimelineItemHeaderP,
 } from "./styles";
 
 interface TimelineProps {
@@ -14,9 +14,9 @@ interface TimelineProps {
 
 interface TimelineItemProps {
   title: string;
-  date: number;
+  date: number | string;
   body: string;
-  side: string;
+  side: "left" | "right";
   bodyTextColor: string;
   bgColor: string;
   dateColor: string;

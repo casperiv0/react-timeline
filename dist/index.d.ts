@@ -4,9 +4,9 @@ interface TimelineProps {
 }
 interface TimelineItemProps {
     title: string;
-    date: number;
+    date: number | string;
     body: string;
-    side: string;
+    side: "left" | "right";
     bodyTextColor: string;
     bgColor: string;
     dateColor: string;
