@@ -69,7 +69,6 @@ function App() {
 | title         | string | set the title                                | true     |
 | side          | string | `left` or `right`                            | true     |
 | date          | string | set a date                                   | true     |
-| body          | string | main text on timeline item                   | true     |
 | bgColor       | string | set a background color for the timeline item | false    |
 | bodyTextColor | string | Set a color for the body text                | false    |
 | dateColor     | string | Set a color for date                         | false    |
