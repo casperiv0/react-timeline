@@ -9,7 +9,7 @@ import {
 } from "./styles";
 
 interface TimelineProps {
-  timelineBg: string;
+  timelineBg?: string;
 }
 
 interface TimelineItemProps {
@@ -17,12 +17,12 @@ interface TimelineItemProps {
   date: number;
   body: string;
   side: string;
-  bodyTextColor: string;
-  bgColor: string;
-  dateColor: string;
-  titleBg: string;
-  titleColor: string;
-  borderRadius: string;
+  bodyTextColor?: string;
+  bgColor?: string;
+  dateColor?: string;
+  titleBg?: string;
+  titleColor?: string;
+  borderRadius?: string;
 }
 
 export const Timeline: React.FC<TimelineProps> = ({

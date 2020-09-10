@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const TimelineDiv = styled.div<{ timelineBg: string }>`
+export const TimelineDiv = styled.div<{ timelineBg?: string }>`
   margin: 0 auto;
   position: relative;
   &::after {
@@ -20,7 +20,7 @@ export const TimelineDiv = styled.div<{ timelineBg: string }>`
   }
 `;
 
-export const TimelineItemDiv = styled.div<{ bgColor: string }>`
+export const TimelineItemDiv = styled.div<{ bgColor?: string }>`
   padding: 10px 40px;
   position: relative;
   width: 50%;
@@ -105,9 +105,9 @@ export const TimelineItemDiv = styled.div<{ bgColor: string }>`
 `;
 
 export const TimelineItemBodyDiv = styled.div<{
-  bgColor: string;
-  borderRadius: string;
-  bodyTextColor: string;
+  bgColor?: string;
+  borderRadius?: string;
+  bodyTextColor?: string;
 }>`
   padding: 15px;
   background-color: ${(props) => (props.bgColor ? props.bgColor : "#232535")};
@@ -125,14 +125,14 @@ export const TimelineItemHeaderDiv = styled.div`
   color: white;
 `;
 
-export const TimelineItemHeaderP = styled.p<{ dateColor: string }>`
+export const TimelineItemHeaderP = styled.p<{ dateColor?: string }>`
   color: ${(props) => (props.dateColor ? props.dateColor : "#848892")};
   font-weight: bold;
 `;
 
 export const TimelineItemHeaderH4 = styled.h4<{
-  titleColor: string;
-  titleBg: string;
+  titleColor?: string;
+  titleBg?: string;
 }>`
   color: ${(props) => (props.titleColor ? props.titleColor : "#fff")};
   background-color: ${(props) => (props.titleBg ? props.titleBg : "#44465c")};
