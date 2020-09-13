@@ -5,7 +5,6 @@ interface TimelineProps {
 interface TimelineItemProps {
     title: string;
     date: number | string;
-    body: string;
     side: "left" | "right";
     bodyTextColor?: string;
     bgColor?: string;
