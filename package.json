@@ -1,6 +1,6 @@
 {
   "name": "react-timelinev2",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Reusable react components to react a good looking and responsive timeline out the box!",
   "main": "dist/index.js",
   "files": [
