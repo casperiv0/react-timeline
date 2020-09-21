@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export const TimelineDiv = styled.div<{ timelineBg?: string }>`
   margin: 0 auto;
@@ -108,12 +108,29 @@ export const TimelineItemBodyDiv = styled.div<{
   bgColor?: string;
   borderRadius?: string;
   bodyTextColor?: string;
+  shadows?: boolean;
+  hoverShadow?: boolean;
 }>`
   padding: 15px;
   background-color: ${(props) => (props.bgColor ? props.bgColor : "#232535")};
   border-radius: ${(props) =>
     props.borderRadius ? props.borderRadius : "6px"};
   color: ${(props) => (props.bodyTextColor ? props.bodyTextColor : "#fff")};
+  transition: box-shadow 200ms;
+
+  ${(props) =>
+    props.shadows &&
+    css`
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    `}
+
+  ${(props) =>
+    props.hoverShadow &&
+    css`
+      &:hover {
+        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+      }
+    `}
 `;
 
 export const TimelineItemHeaderDiv = styled.div`

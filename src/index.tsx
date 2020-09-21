@@ -22,6 +22,8 @@ interface TimelineItemProps {
   titleBg?: string;
   titleColor?: string;
   borderRadius?: string;
+  shadows?: boolean;
+  hoverShadow: boolean;
 }
 
 export const Timeline: React.FC<TimelineProps> = ({
@@ -46,12 +48,16 @@ export const TimelineItem: React.FC<TimelineItemProps> = ({
   titleColor,
   titleBg,
   title,
+  shadows,
+  hoverShadow,
   children,
   ...rest
 }) => {
   return (
     <TimelineItemDiv bgColor={bgColor} className={side} {...rest}>
       <TimelineItemBodyDiv
+        shadows={shadows}
+        hoverShadow={hoverShadow}
         borderRadius={borderRadius}
         bodyTextColor={bodyTextColor}
         bgColor={bgColor}

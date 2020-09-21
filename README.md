@@ -31,8 +31,8 @@ function App() {
         <TimelineItem side="left" title="hello world" date="2020">
           Some text
         </TimelineItem>
-        <TimelineItem side="left" title="hello world" date="2020">
-          Some text
+        <TimelineItem shadows hoverShadow side="left" title="hello world" date="2020">
+          I will have shadows!
         </TimelineItem>
         <TimelineItem side="right" title="hello world" date="2020">
           Some text
@@ -64,18 +64,19 @@ function App() {
 
 ### TimelineItem
 
-| Option        | type   | description                                  | required |
-| ------------- | ------ | -------------------------------------------- | -------- |
-| title         | string | set the title                                | true     |
-| side          | string | `left` or `right`                            | true     |
-| date          | string | set a date                                   | true     |
-| bgColor       | string | set a background color for the timeline item | false    |
-| bodyTextColor | string | Set a color for the body text                | false    |
-| dateColor     | string | Set a color for date                         | false    |
-| titleBg       | string | Set a background color for the title         | false    |
-| titleColor    | string | Set a color for title                        | false    |
-| borderRadius  | string | Set a border radius for the timeline item    | false    |
-
+| Option        | type    | description                                  | required |
+| ------------- | ------- | -------------------------------------------- | -------- |
+| title         | string  | set the title                                | true     |
+| side          | string  | `left` or `right`                            | true     |
+| date          | string  | set a date                                   | true     |
+| bgColor       | string  | set a background color for the timeline item | false    |
+| bodyTextColor | string  | Set a color for the body text                | false    |
+| dateColor     | string  | Set a color for date                         | false    |
+| titleBg       | string  | Set a background color for the title         | false    |
+| titleColor    | string  | Set a color for title                        | false    |
+| borderRadius  | string  | Set a border radius for the timeline item    | false    |
+| shadows       | boolean | Sets a box-shadow                            | false    |
+| hoverShadow   | boolean | Sets a box-shadow on hover only              | false    |
 
 ## Supporting react-timelinev2
 
