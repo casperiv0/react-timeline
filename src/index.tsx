@@ -23,7 +23,7 @@ interface TimelineItemProps {
   titleColor?: string;
   borderRadius?: string;
   shadows?: boolean;
-  hoverShadow: boolean;
+  hoverShadow?: boolean;
 }
 
 export const Timeline: React.FC<TimelineProps> = ({
