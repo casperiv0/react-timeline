@@ -83,3 +83,7 @@ function App() {
 **All stars/forks are appreciated!**
 
 Made with ❤ and TypeScript
+
+## License
+
+[MIT](./LICENSE)
