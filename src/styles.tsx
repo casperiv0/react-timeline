@@ -1,6 +1,9 @@
 import styled, { css } from "styled-components";
+import { TimelineProps } from "./index";
 
-export const TimelineDiv = styled.div<{ timelineBg?: string }>`
+export const TimelineDiv = styled.div<TimelineProps>`
+  padding: 0;
+  box-sizing: border-box;
   margin: 0 auto;
   position: relative;
   &::after {
@@ -9,7 +12,7 @@ export const TimelineDiv = styled.div<{ timelineBg?: string }>`
     top: 0;
     bottom: 0;
     width: 6px;
-    background: ${(props) => (props.timelineBg ? props.timelineBg : "#44465c")};
+    background: ${(props) => props.timelineBg};
     left: 50%;
     margin-left: -3px;
   }
@@ -32,7 +35,7 @@ export const TimelineItemDiv = styled.div<{ bgColor?: string }>`
     right: -13px;
     width: 25px;
     height: 25px;
-    background: ${(props) => (props.bgColor ? props.bgColor : "#232535")};
+    background: ${(props) => props.bgColor};
     border-radius: 50%;
     transform: translateY(-50%);
   }
@@ -52,10 +55,9 @@ export const TimelineItemDiv = styled.div<{ bgColor?: string }>`
     position: absolute;
     top: 50%;
     right: 30px;
-    border: 10px solid ${(props) => (props.bgColor ? props.bgColor : "#232535")};
+    border: 10px solid ${(props) => props.bgColor};
     border-width: 10px 0 10px 10px;
-    border-color: transparent transparent transparent
-      ${(props) => (props.bgColor ? props.bgColor : "#232535")};
+    border-color: transparent transparent transparent ${(props) => props.bgColor};
     transform: translateY(-50%);
   }
   &.right::before {
@@ -65,11 +67,9 @@ export const TimelineItemDiv = styled.div<{ bgColor?: string }>`
     position: absolute;
     top: 50%;
     left: 30px;
-    border: 10px solid ${(props) => (props.bgColor ? props.bgColor : "#232535")};
+    border: 10px solid ${(props) => props.bgColor};
     border-width: 10px 10px 10px 0;
-    border-color: transparent
-      ${(props) => (props.bgColor ? props.bgColor : "#232535")} transparent
-      transparent;
+    border-color: transparent ${(props) => props.bgColor} transparent transparent;
     transform: translateY(-50%);
   }
   @media (max-width: 768px) {
@@ -79,9 +79,7 @@ export const TimelineItemDiv = styled.div<{ bgColor?: string }>`
     &::before {
       left: 60px;
       border-width: 10px 10px 10px 0;
-      border-color: transparent
-        ${(props) => (props.bgColor ? props.bgColor : "#232535")} transparent
-        transparent;
+      border-color: transparent ${(props) => props.bgColor} transparent transparent;
     }
     &.left::after,
     &.right::after {
@@ -94,9 +92,7 @@ export const TimelineItemDiv = styled.div<{ bgColor?: string }>`
     &.left::before {
       left: 60px;
       border-width: 10px 10px 10px 0;
-      border-color: transparent
-        ${(props) => (props.bgColor ? props.bgColor : "#232535")} transparent
-        transparent;
+      border-color: transparent ${(props) => props.bgColor} transparent transparent;
     }
     &.right::before {
       left: 60px;
@@ -112,10 +108,9 @@ export const TimelineItemBodyDiv = styled.div<{
   hoverShadow?: boolean;
 }>`
   padding: 15px;
-  background-color: ${(props) => (props.bgColor ? props.bgColor : "#232535")};
-  border-radius: ${(props) =>
-    props.borderRadius ? props.borderRadius : "6px"};
-  color: ${(props) => (props.bodyTextColor ? props.bodyTextColor : "#fff")};
+  background-color: ${(props) => props.bgColor};
+  border-radius: ${(props) => props.borderRadius};
+  color: ${(props) => props.bodyTextColor};
   transition: box-shadow 200ms;
 
   ${(props) =>
@@ -143,7 +138,7 @@ export const TimelineItemHeaderDiv = styled.div`
 `;
 
 export const TimelineItemHeaderP = styled.p<{ dateColor?: string }>`
-  color: ${(props) => (props.dateColor ? props.dateColor : "#848892")};
+  color: ${(props) => props.dateColor};
   font-weight: bold;
 `;
 
@@ -151,7 +146,7 @@ export const TimelineItemHeaderH4 = styled.h4<{
   titleColor?: string;
   titleBg?: string;
 }>`
-  color: ${(props) => (props.titleColor ? props.titleColor : "#fff")};
-  background-color: ${(props) => (props.titleBg ? props.titleBg : "#44465c")};
+  color: ${(props) => props.titleColor};
+  background-color: ${(props) => props.titleBg};
   padding: 5px;
 `;

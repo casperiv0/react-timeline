@@ -8,11 +8,11 @@ import {
   TimelineItemHeaderP,
 } from "./styles";
 
-interface TimelineProps {
+export interface TimelineProps {
   timelineBg?: string;
 }
 
-interface TimelineItemProps {
+export interface TimelineItemProps {
   title: string;
   date: number | string;
   side: "left" | "right";
@@ -26,11 +26,7 @@ interface TimelineItemProps {
   hoverShadow?: boolean;
 }
 
-export const Timeline: React.FC<TimelineProps> = ({
-  timelineBg,
-  children,
-  ...rest
-}) => {
+export const Timeline: React.FC<TimelineProps> = ({ timelineBg, children, ...rest }) => {
   return (
     <TimelineDiv timelineBg={timelineBg} {...rest}>
       {children}
@@ -63,9 +59,7 @@ export const TimelineItem: React.FC<TimelineItemProps> = ({
         bgColor={bgColor}
       >
         <TimelineItemHeaderDiv>
-          <TimelineItemHeaderP dateColor={dateColor}>
-            {date}
-          </TimelineItemHeaderP>
+          <TimelineItemHeaderP dateColor={dateColor}>{date}</TimelineItemHeaderP>
           <TimelineItemHeaderH4 titleColor={titleColor} titleBg={titleBg}>
             {title}
           </TimelineItemHeaderH4>
@@ -74,4 +68,17 @@ export const TimelineItem: React.FC<TimelineItemProps> = ({
       </TimelineItemBodyDiv>
     </TimelineItemDiv>
   );
+};
+
+Timeline.defaultProps = {
+  timelineBg: "#44465c",
+};
+
+TimelineItem.defaultProps = {
+  bgColor: "#232535",
+  borderRadius: "6px",
+  bodyTextColor: "#fff",
+  dateColor: "#848892",
+  titleBg: "#44465c",
+  titleColor: "#fff",
 };
