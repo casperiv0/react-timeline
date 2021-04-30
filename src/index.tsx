@@ -34,37 +34,23 @@ export const Timeline: React.FC<TimelineProps> = ({ timelineBg, children, ...res
   );
 };
 
-export const TimelineItem: React.FC<TimelineItemProps> = ({
-  bgColor,
-  side,
-  borderRadius,
-  bodyTextColor,
-  dateColor,
-  date,
-  titleColor,
-  titleBg,
-  title,
-  shadows,
-  hoverShadow,
-  children,
-  ...rest
-}) => {
+export const TimelineItem: React.FC<TimelineItemProps> = (props) => {
   return (
-    <TimelineItemDiv bgColor={bgColor} className={side} {...rest}>
+    <TimelineItemDiv bgColor={props.bgColor} className={props.side} {...props}>
       <TimelineItemBodyDiv
-        shadows={shadows}
-        hoverShadow={hoverShadow}
-        borderRadius={borderRadius}
-        bodyTextColor={bodyTextColor}
-        bgColor={bgColor}
+        shadows={props.shadows}
+        hoverShadow={props.hoverShadow}
+        borderRadius={props.borderRadius}
+        bodyTextColor={props.bodyTextColor}
+        bgColor={props.bgColor}
       >
         <TimelineItemHeaderDiv>
-          <TimelineItemHeaderP dateColor={dateColor}>{date}</TimelineItemHeaderP>
-          <TimelineItemHeaderH4 titleColor={titleColor} titleBg={titleBg}>
-            {title}
+          <TimelineItemHeaderP dateColor={props.dateColor}>{props.date}</TimelineItemHeaderP>
+          <TimelineItemHeaderH4 titleColor={props.titleColor} titleBg={props.titleBg}>
+            {props.title}
           </TimelineItemHeaderH4>
         </TimelineItemHeaderDiv>
-        {children}
+        {props.children}
       </TimelineItemBodyDiv>
     </TimelineItemDiv>
   );

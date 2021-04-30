@@ -6,6 +6,7 @@ export const TimelineDiv = styled.div<TimelineProps>`
   box-sizing: border-box;
   margin: 0 auto;
   position: relative;
+
   &::after {
     content: "";
     position: absolute;
@@ -16,6 +17,7 @@ export const TimelineDiv = styled.div<TimelineProps>`
     left: 50%;
     margin-left: -3px;
   }
+
   @media (max-width: 768px) {
     &::after {
       left: 31px;
@@ -27,6 +29,7 @@ export const TimelineItemDiv = styled.div<{ bgColor?: string }>`
   padding: 10px 40px;
   position: relative;
   width: 50%;
+
   &::after {
     z-index: 10;
     content: "";
@@ -39,15 +42,19 @@ export const TimelineItemDiv = styled.div<{ bgColor?: string }>`
     border-radius: 50%;
     transform: translateY(-50%);
   }
+
   &.left {
     left: 0;
   }
+
   &.right {
     left: 50%;
   }
+
   &.right::after {
     left: -12px;
   }
+
   &.left::before {
     content: "";
     height: 0px;
@@ -60,6 +67,7 @@ export const TimelineItemDiv = styled.div<{ bgColor?: string }>`
     border-color: transparent transparent transparent ${(props) => props.bgColor};
     transform: translateY(-50%);
   }
+
   &.right::before {
     content: "";
     height: 0px;
@@ -72,28 +80,34 @@ export const TimelineItemDiv = styled.div<{ bgColor?: string }>`
     border-color: transparent ${(props) => props.bgColor} transparent transparent;
     transform: translateY(-50%);
   }
+
   @media (max-width: 768px) {
     width: 100%;
     padding-left: 70px;
     padding-right: 25px;
+
     &::before {
       left: 60px;
       border-width: 10px 10px 10px 0;
       border-color: transparent ${(props) => props.bgColor} transparent transparent;
     }
+
     &.left::after,
     &.right::after {
       left: 19px;
       z-index: 10;
     }
+
     &.right {
       left: 0;
     }
+
     &.left::before {
       left: 60px;
       border-width: 10px 10px 10px 0;
       border-color: transparent ${(props) => props.bgColor} transparent transparent;
     }
+
     &.right::before {
       left: 60px;
     }
