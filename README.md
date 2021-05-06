@@ -10,13 +10,17 @@ Reusable react components to create a good looking and responsive timeline out t
 
 ## Installation
 
-**npm**
+### npm
 
-`npm install react-timelinev2`
+```bash
+npm install react-timelinev2
+```
 
-**Yarn**
+### Yarn
 
-`yarn add react-timelinev2`
+```bash
+yarn add react-timelinev2
+```
 
 ## Usage
 
