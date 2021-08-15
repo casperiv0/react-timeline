@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components";
-import { TimelineProps } from "./index";
+import { TimelineProps } from "./index.js";
 
 export const TimelineDiv = styled.div<TimelineProps>`
   padding: 0;

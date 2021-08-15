@@ -3,12 +3,7 @@
     "browser": true,
     "es2021": true
   },
-  "extends": [
-    "eslint:recommended",
-    "plugin:react/recommended",
-    "plugin:@typescript-eslint/recommended",
-    "@casper124578/eslint-config"
-  ],
+  "extends": ["@casper124578/eslint-config", "@casper124578/eslint-config-react"],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "ecmaFeatures": {
@@ -16,9 +11,5 @@
     },
     "ecmaVersion": 12,
     "sourceType": "module"
-  },
-  "plugins": ["react", "@typescript-eslint"],
-  "rules": {
-    "react/prop-types": "off"
   }
 }

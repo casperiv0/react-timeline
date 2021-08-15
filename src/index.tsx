@@ -6,7 +6,7 @@ import {
   TimelineItemHeaderDiv,
   TimelineItemHeaderH4,
   TimelineItemHeaderP,
-} from "./styles";
+} from "./styles.js";
 
 export interface TimelineProps {
   timelineBg?: string;
